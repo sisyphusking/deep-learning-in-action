@@ -31,19 +31,24 @@ if __name__ == '__main__':
         style_image = load_image(STYLE_IMG)
         model = load_vgg_model(VGG_MODEL)
 
+        # 随机生成的图片
         input_image = generate_noise_image(content_image)
         sess.run(tf.global_variables_initializer())
 
+        # 计算内容图片和随机图片的误差
         sess.run(model['input'].assign(content_image))
         content_loss = content_loss_func(sess, model)
 
+        # 计算风格图片和随机图片的误差
         sess.run(model['input'].assign(style_image))
         style_loss = style_loss_func(sess, model)
 
+        # 损失函数
         total_loss = BETA * content_loss + ALPHA * style_loss
         optimizer = tf.train.AdamOptimizer(2.0)
         train = optimizer.minimize(total_loss)
 
+        # 随机图片作为输入
         sess.run(tf.global_variables_initializer())
         sess.run(model['input'].assign(input_image))
 
@@ -57,4 +62,5 @@ if __name__ == '__main__':
                 print('Cost: ', sess.run(total_loss))
 
                 save_image(os.path.join(OUTPUT_DIR, 'output_%d.jpg' % i), output_image)
+
 

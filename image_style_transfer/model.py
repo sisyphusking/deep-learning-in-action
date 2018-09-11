@@ -122,6 +122,7 @@ def style_loss_func(sess, model):
         G = _gram_matrix(x, N, M)
         return (1 / (4 * N ** 2 * M ** 2)) * tf.reduce_sum(tf.pow(G - A, 2))
 
+    # sess.run(model[layer_name])运行的输入是风格图片，  model[layer_name]的输入是噪音图片
     return sum([_style_loss(sess.run(model[layer_name]), model[layer_name]) * w for layer_name, w in STYLE_LAYERS])
 
 
