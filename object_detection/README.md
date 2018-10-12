@@ -10,3 +10,5 @@ COCO数据集是微软发布的一个可以用来进行图像识别训练的数�
 - [object detection introduction](https://pythonprogramming.net/introduction-use-tensorflow-object-detection-api-tutorial/)
 - [review-of-deep-learning-algorithms-for-object-detection](https://medium.com/comet-app/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852)
 - [Screen-Vehicle-Detection-using-Tensorflow-API](https://github.com/XiangGuo1992/Screen-Vehicle-Detection-using-Tensorflow-API)
+- [zh.gluon.ai](https://zh.gluon.ai/)
+- [basics of detection](https://becominghuman.ai/tensorflow-object-detection-api-basics-of-detection-2-2-28b348495eec)
