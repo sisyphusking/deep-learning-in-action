@@ -3,7 +3,6 @@ keras
 wordcloud
 matplotlib
 jieba
-PIL
 opencv-python
 opencv-contrib-python
 gensim

@@ -24,6 +24,6 @@ for i, item in enumerate(items):
 # 不相关词
 print('=' * 20)
 print(model.wv.doesnt_match(['早餐', '午餐', '晚餐', '手机']))
-计算相关度
+# 计算相关度
 print('=' * 20)
 print(model.wv.similarity('男人', '女人'))
